@@ -26,23 +26,23 @@ const {
   helmetConfig, globalLimiter, authLimiter,
   paymentLimiter, chatLimiter, walletLimiter,
   validate, sqlGuard, auth, adminAuth,
-} = require('./security/security');
+} = require('./security');
 
 const {
   initSentry, sentryRequestHandler, sentryTracingHandler,
   sentryErrorHandler, captureError, captureMessage,
   healthCheck, metricsMiddleware, getMetrics,
   globalErrorHandler, attachProcessHandlers, metrics,
-} = require('./monitoring/monitoring');
+} = require('./monitoring');
 
 const {
   initFirebase, NOTIF, startNotifCrons,
 } = require('./notifications/pushService');
 
 const notifRoutes  = require('./notifications/notifRoutes');
-const engagementR  = require('./engagement/engagement');
-const ussdRouter   = require('./ussd/ussd');
-const aiRoutes     = require('./ai/aiRoutes');
+const engagementR = require('./engagement');
+const ussdRouter = require('./ussd');
+const aiRoutes = require('./aiRoutes');
 const paymentRoutes= require('./routes/paymentRoutes');
 const kycRoutes    = require('./routes/kycRoutes');
 const marketRoutes = require('./routes/marketRoutes');
