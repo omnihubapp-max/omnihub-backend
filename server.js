@@ -35,11 +35,14 @@ const {
   globalErrorHandler, attachProcessHandlers, metrics,
 } = require('./monitoring');
 
+// ── Notifications ─────────────────────────────────────────────
 const {
-  initFirebase, NOTIF, startNotifCrons,
-} = require('./notifications/pushService');
+  initFirebase,
+  NOTIF,
+  startNotifCrons,
+} = require('./pushService');
 
-const notifRoutes  = require('./notifications/notifRoutes');
+const notifRoutes = require('./notifRoutes');
 const engagementR = require('./engagement');
 const ussdRouter = require('./ussd');
 const aiRoutes = require('./aiRoutes');
