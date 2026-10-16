@@ -13,7 +13,7 @@ const {
   TelebirrService,
   CBEbirrService,
   WithdrawalService,
-} = require('../services/PaymentService');
+} = require('../PaymentService');
 
 const db = new Pool({ connectionString: process.env.DATABASE_URL });
 
