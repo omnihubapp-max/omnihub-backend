@@ -605,7 +605,7 @@ async function startup() {
 
   // Start AI daily summary cron (from aiRoutes)
   try {
-    const { registerAICronJobs } = require('./ai/AIAssistant');
+    const { registerAICronJobs } = require('./AIAssistant');
     registerAICronJobs();
   } catch(e) { console.warn('[AI Cron] Not loaded:', e.message); }
 
