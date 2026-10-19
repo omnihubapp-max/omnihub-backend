@@ -146,7 +146,7 @@ router.get('/verify/:txRef', auth, async (req, res) => {
 
     if (result?.verified) {
       // Credit wallet if not yet done
-      const { creditWallet } = require('../services/PaymentService');
+      const { creditWallet } = require('../PaymentService');
       const amountUSD = payment.amount_etb / parseFloat(process.env.ETB_PER_USD || '55.5');
       await creditWallet(req.user.id, payment.amount_etb, amountUSD, txRef, payment.provider);
     }
